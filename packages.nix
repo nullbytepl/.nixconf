@@ -25,7 +25,6 @@ pkgs: with pkgs; [
     pkgs.python311Full
     pkgs.python311Packages.pip
     pkgs.pipx
-    pkgs.nodejs
     pkgs.nodejs_21
 
     # Libraries & stuff
