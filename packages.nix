@@ -2,7 +2,7 @@ pkgs: with pkgs; [
     # Basics
     kate
     pkgs.google-chrome
-    pkgs.vscode
+    pkgs.vscode.fhs
     pkgs.git
     pkgs.binutils
     pkgs.spotify
