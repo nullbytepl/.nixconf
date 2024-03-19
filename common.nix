@@ -1,9 +1,11 @@
 { config, pkgs, ... }:
-
 {
   imports =
     [
       ./base.nix
+      ./fragments/vmware.nix
+      ./fragments/git.nix
+      ./fragments/steam.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -19,27 +21,8 @@
 
   environment.systemPackages = import ./packages.nix pkgs;
 
-  # Steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
-
   # In case python2 is needed (for nix-shell usage)
   nixpkgs.config.permittedInsecurePackages = [
     "python-2.7.18.7"
   ];
-
-  # Git configuration
-  programs.git = {
-    enable = true;
-    config = {
-      user.name  = "Kamila Wojciechowska";
-      user.email = "nullbytepl@gmail.com";
-    };
-  };
-
-  # Required to run the kernel modules for vmware
-  virtualisation.vmware.host.enable = true;
 }
