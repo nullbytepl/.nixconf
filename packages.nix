@@ -19,6 +19,7 @@ pkgs: with pkgs; [
     pkgs.obs-studio
     pkgs.vlc
     ktorrent
+    pkgs.gnome.gnome-boxes
 
     # Misc development
     pkgs.jdk21
