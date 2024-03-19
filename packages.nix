@@ -36,4 +36,5 @@ pkgs: with pkgs; [
     # Android
     pkgs.android-studio
     pkgs.android-tools # This would be installed by android-studio, but it's nixos after all
+    pkgs.git-repo
 ]
