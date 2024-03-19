@@ -6,6 +6,8 @@
       ./fragments/vmware.nix
       ./fragments/git.nix
       ./fragments/steam.nix
+      ./fragments/logi/logiops.nix
+      ./fragments/magic_keyboard.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
