@@ -20,6 +20,7 @@ pkgs: with pkgs; [
     pkgs.vlc
     ktorrent
     pkgs.gnome.gnome-boxes
+    pkgs.vmware-workstation
 
     # Misc development
     pkgs.jdk21

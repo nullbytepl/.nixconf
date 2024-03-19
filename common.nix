@@ -39,4 +39,7 @@
       user.email = "nullbytepl@gmail.com";
     };
   };
+
+  # Required to run the kernel modules for vmware
+  virtualisation.vmware.host.enable = true;
 }
