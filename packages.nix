@@ -8,6 +8,7 @@ pkgs: with pkgs; [
     pkgs.spotify
     pkgs.discord
     pkgs.hyfetch
+    pkgs.telegram-desktop
 
     # Utils
     pkgs.usbutils
