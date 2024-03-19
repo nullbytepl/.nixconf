@@ -8,6 +8,7 @@
       ./fragments/steam.nix
       ./fragments/logi/logiops.nix
       ./fragments/magic_keyboard.nix
+      ./fragments/bluetooth.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
