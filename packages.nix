@@ -14,6 +14,7 @@ pkgs: with pkgs; [
     pkgs.pciutils
     pkgs.htop
     pkgs.s-tui
+    pkgs.file
 
     # Misc
     pkgs.obs-studio
