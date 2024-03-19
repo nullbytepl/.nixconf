@@ -31,4 +31,12 @@
     "python-2.7.18.7"
   ];
 
+  # Git configuration
+  programs.git = {
+    enable = true;
+    config = {
+      user.name  = "Kamila Wojciechowska";
+      user.email = "nullbytepl@gmail.com";
+    };
+  };
 }

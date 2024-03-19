@@ -3,7 +3,6 @@ pkgs: with pkgs; [
     kate
     pkgs.google-chrome
     pkgs.vscode.fhs
-    pkgs.git
     pkgs.binutils
     pkgs.spotify
     pkgs.discord
