@@ -1,6 +1,6 @@
 pkgs: with pkgs; [
     # Basics
-    kate
+    kdePackages.kate
     pkgs.google-chrome
     pkgs.vscode.fhs
     pkgs.binutils
@@ -21,13 +21,12 @@ pkgs: with pkgs; [
     # Misc
     pkgs.obs-studio
     pkgs.vlc
-    ktorrent
+    kdePackages.ktorrent
 
     # Misc development
     pkgs.jdk21
     pkgs.python311Full
     pkgs.python311Packages.pip
-    pkgs.pipx
     pkgs.nodejs_21
 
     # Libraries & stuff
