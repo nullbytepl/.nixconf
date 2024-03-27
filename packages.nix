@@ -17,6 +17,7 @@ pkgs: with pkgs; [
     pkgs.file
     pkgs.wget
     pkgs.zip
+    pkgs.p7zip
 
     # Misc
     pkgs.obs-studio
