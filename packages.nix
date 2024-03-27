@@ -15,12 +15,13 @@ pkgs: with pkgs; [
     pkgs.htop
     pkgs.s-tui
     pkgs.file
+    pkgs.wget
+    pkgs.zip
 
     # Misc
     pkgs.obs-studio
     pkgs.vlc
     ktorrent
-    pkgs.gnome.gnome-boxes
 
     # Misc development
     pkgs.jdk21
@@ -37,4 +38,5 @@ pkgs: with pkgs; [
     pkgs.android-studio
     pkgs.android-tools # This would be installed by android-studio, but it's nixos after all
     pkgs.git-repo
+    pkgs.jadx
 ]
