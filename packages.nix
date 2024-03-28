@@ -18,6 +18,7 @@ pkgs: with pkgs; [
     pkgs.wget
     pkgs.zip
     pkgs.p7zip
+    pkgs.nil # Nix language server
 
     # Misc
     pkgs.obs-studio
