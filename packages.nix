@@ -19,6 +19,7 @@ pkgs: with pkgs; [
     pkgs.zip
     pkgs.p7zip
     pkgs.nil # Nix language server
+    pkgs.gnome.ghex
 
     # Misc
     pkgs.obs-studio
