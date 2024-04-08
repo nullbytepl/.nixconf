@@ -9,6 +9,7 @@
       ./fragments/logi/logiops.nix
       ./fragments/magic_keyboard.nix
       ./fragments/bluetooth.nix
+      ./fragments/adb.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
