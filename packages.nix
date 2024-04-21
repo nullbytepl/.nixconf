@@ -25,16 +25,22 @@ pkgs: with pkgs; [
     pkgs.obs-studio
     pkgs.vlc
     kdePackages.ktorrent
+    kdePackages.kdenlive
+    pkgs.tor-browser
+    pkgs.googleearth-pro
 
     # Misc development
     pkgs.jdk21
     pkgs.python311Full
     pkgs.python311Packages.pip
     pkgs.nodejs_21
+    pkgs.qucs-s
+    pkgs.dart
 
     # Libraries & stuff
     pkgs.corefonts
     pkgs.fira-code
+    pkgs.apple-cursor
 
     # Android
     pkgs.android-studio

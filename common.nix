@@ -21,12 +21,15 @@
     packages = import ./user_packages.nix pkgs;
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+
+    # Needs to be in the top-level config
+    # Ugly, but it works
+    permittedInsecurePackages = [
+      "googleearth-pro-7.3.4.8248"
+    ];
+  };
 
   environment.systemPackages = import ./packages.nix pkgs;
-
-  # In case python2 is needed (for nix-shell usage)
-  nixpkgs.config.permittedInsecurePackages = [
-    "python-2.7.18.7"
-  ];
 }
