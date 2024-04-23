@@ -39,6 +39,7 @@ pkgs: with pkgs; [
 
     # Libraries & stuff
     pkgs.corefonts
+    pkgs.vistafonts
     pkgs.fira-code
     pkgs.apple-cursor
 
