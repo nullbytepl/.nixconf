@@ -4,6 +4,7 @@
   imports =
     [
       ../common.nix
+      ../fragments/intel_platform.nix
     ];
 
     networking.hostName = "puppy";
