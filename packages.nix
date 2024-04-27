@@ -23,7 +23,7 @@ pkgs: with pkgs; [
 
     # Misc
     pkgs.obs-studio
-    pkgs.vlc
+    pkgs.mpv
     kdePackages.ktorrent
     kdePackages.kdenlive
     pkgs.tor-browser
