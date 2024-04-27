@@ -33,7 +33,7 @@ pkgs: with pkgs; [
     pkgs.jdk21
     pkgs.python311Full
     pkgs.python311Packages.pip
-    pkgs.nodejs_21
+    pkgs.nodejs_22
     pkgs.qucs-s
     pkgs.dart
 
