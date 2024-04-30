@@ -5,7 +5,6 @@ pkgs: with pkgs; [
     pkgs.vscode.fhs
     pkgs.binutils
     pkgs.spotify
-    pkgs.discord
     pkgs.hyfetch
     pkgs.telegram-desktop
 

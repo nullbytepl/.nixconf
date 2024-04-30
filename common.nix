@@ -10,6 +10,7 @@
       ./fragments/magic_keyboard.nix
       ./fragments/bluetooth.nix
       ./fragments/adb.nix
+      ./fragments/vesktop.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
