@@ -36,6 +36,7 @@ pkgs: with pkgs; [
     pkgs.nodejs_22
     pkgs.qucs-s
     pkgs.dart
+    pkgs.flutter
 
     # Libraries & stuff
     pkgs.corefonts
