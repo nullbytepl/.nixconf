@@ -28,6 +28,7 @@ pkgs: with pkgs; [
     kdePackages.kdenlive
     pkgs.tor-browser
     pkgs.googleearth-pro
+    pkgs.cura
 
     # Misc development
     pkgs.jdk21
