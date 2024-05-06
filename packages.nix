@@ -29,6 +29,7 @@ pkgs: with pkgs; [
     pkgs.tor-browser
     pkgs.googleearth-pro
     pkgs.cura
+    pkgs.slack
 
     # Misc development
     pkgs.jdk21
@@ -38,6 +39,7 @@ pkgs: with pkgs; [
     pkgs.qucs-s
     pkgs.dart
     pkgs.flutter
+    pkgs.patchelf
 
     # Libraries & stuff
     pkgs.corefonts
