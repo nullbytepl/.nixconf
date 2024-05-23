@@ -33,4 +33,8 @@
   };
 
   environment.systemPackages = import ./packages.nix pkgs;
+
+  environment.sessionVariables = {
+    NIXPKGS_ALLOW_UNFREE = "1";
+  };
 }
