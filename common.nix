@@ -11,6 +11,7 @@
       ./fragments/bluetooth.nix
       ./fragments/adb.nix
       ./fragments/vesktop.nix
+      ./fragments/waydroid.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
