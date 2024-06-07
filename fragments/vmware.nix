@@ -23,4 +23,7 @@
 
     # Required to run the kernel modules for vmware
     virtualisation.vmware.host.enable = true;
+
+    # Enable macos guest support
+    virtualisation.vmware.host.package = pkgs.vmware-workstation.override { enableMacOSGuests = true; };
 }
