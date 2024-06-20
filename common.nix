@@ -12,6 +12,7 @@
       ./fragments/adb.nix
       ./fragments/vesktop.nix
       ./fragments/waydroid.nix
+      ./fragments/flutter.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
