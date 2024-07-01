@@ -40,6 +40,12 @@ pkgs: with pkgs; [
     pkgs.dart
     pkgs.flutter
     pkgs.patchelf
+    pkgs.dtc
+    pkgs.binwalk
+    pkgs.lz4
+    pkgs.apktool
+    pkgs.uefitool
+    pkgs.dos2unix
 
     # Libraries & stuff
     pkgs.corefonts
