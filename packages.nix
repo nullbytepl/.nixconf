@@ -40,7 +40,7 @@ pkgs: with pkgs; [
     pkgs.dart
     pkgs.patchelf
     pkgs.dtc
-    pkgs.binwalk
+    #pkgs.binwalk - # BROKEN - tracking: https://github.com/NixOS/nixpkgs/pull/325865
     pkgs.lz4
     pkgs.apktool
     pkgs.uefitool
