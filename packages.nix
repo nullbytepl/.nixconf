@@ -18,7 +18,7 @@ pkgs: with pkgs; [
     pkgs.zip
     pkgs.p7zip
     pkgs.nil # Nix language server
-    pkgs.ghex
+    pkgs.gnome.ghex
     pkgs.unzip
 
     # Misc
@@ -28,7 +28,7 @@ pkgs: with pkgs; [
     kdePackages.kdenlive
     pkgs.tor-browser
     pkgs.googleearth-pro
-    #pkgs.cura # BROKEN - tracking: https://github.com/NixOS/nixpkgs/issues/186570
+    pkgs.cura
     pkgs.slack
 
     # Misc development
@@ -40,7 +40,7 @@ pkgs: with pkgs; [
     pkgs.dart
     pkgs.patchelf
     pkgs.dtc
-    #pkgs.binwalk - # BROKEN - tracking: https://github.com/NixOS/nixpkgs/pull/325865
+    pkgs.binwalk
     pkgs.lz4
     pkgs.apktool
     pkgs.uefitool
