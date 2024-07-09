@@ -18,7 +18,7 @@ pkgs: with pkgs; [
     pkgs.zip
     pkgs.p7zip
     pkgs.nil # Nix language server
-    pkgs.gnome.ghex
+    pkgs.ghex
     pkgs.unzip
 
     # Misc
