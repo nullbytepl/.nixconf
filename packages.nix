@@ -28,7 +28,7 @@ pkgs: with pkgs; [
     kdePackages.kdenlive
     pkgs.tor-browser
     pkgs.googleearth-pro
-    pkgs.cura
+    #pkgs.cura # BROKEN - tracking: https://github.com/NixOS/nixpkgs/issues/186570
     pkgs.slack
 
     # Misc development
