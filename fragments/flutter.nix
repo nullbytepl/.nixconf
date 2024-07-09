@@ -15,6 +15,8 @@ in {
 
   environment.systemPackages = with pkgs; [ flutter androidSdk ];
 
+  nixpkgs.config.android_sdk.accept_license = true;
+
   environment.sessionVariables = {
     ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
     NIXPKGS_ACCEPT_ANDROID_SDK_LICENSE = "1";
