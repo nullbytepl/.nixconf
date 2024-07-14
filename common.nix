@@ -13,6 +13,7 @@
       ./fragments/vesktop.nix
       ./fragments/waydroid.nix
       ./fragments/flutter.nix
+      ./fragments/chrome.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;

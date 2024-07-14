@@ -1,7 +1,6 @@
 pkgs: with pkgs; [
     # Basics
     kdePackages.kate
-    pkgs.google-chrome
     pkgs.vscode.fhs
     pkgs.binutils
     pkgs.spotify
