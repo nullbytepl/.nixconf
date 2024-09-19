@@ -5,7 +5,7 @@
     [
       ../common.nix
       ../fragments/intel_platform.nix
-      ../fragments/ddcci.nix
+      #../fragments/ddcci.nix
     ];
 
     networking.hostName = "puppy";
