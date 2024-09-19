@@ -44,6 +44,7 @@ pkgs: with pkgs; [
     pkgs.apktool
     pkgs.uefitool
     pkgs.dos2unix
+    pkgs.typescript
 
     # Libraries & stuff
     pkgs.corefonts
