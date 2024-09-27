@@ -5,7 +5,7 @@
     [
       ../common.nix
       ../fragments/intel_platform.nix
-      #../fragments/ddcci.nix
+      ../fragments/ddcci.nix
       ../fragments/xe_4680.nix
     ];
 
@@ -21,7 +21,7 @@
       ${pkgs.bluez}/bin/bluetoothctl connect 48:E1:5C:C3:A5:04 &
 
       # Create the DDCCI device for the monitor
-      echo 'ddcci 0x37' > /sys/class/drm/card1-DP-1/i2c-10/new_device &
+      echo 'ddcci 0x37' > /sys/class/drm/card*-DP-1/i2c-*/new_device &
       ${pkgs.kmod}/bin/modprobe ddcci_backlight &
     '';
 }
