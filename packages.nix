@@ -25,6 +25,7 @@ pkgs: with pkgs; [
     pkgs.mpv
     kdePackages.ktorrent
     kdePackages.kdenlive
+    kdePackages.partitionmanager
     pkgs.tor-browser
     pkgs.googleearth-pro
     pkgs.cura
