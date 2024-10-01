@@ -30,6 +30,7 @@ pkgs: with pkgs; [
     pkgs.googleearth-pro
     pkgs.cura
     pkgs.slack
+    pkgs.axel
 
     # Misc development
     pkgs.jdk21
