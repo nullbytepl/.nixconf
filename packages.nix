@@ -17,7 +17,7 @@ pkgs: with pkgs; [
     pkgs.zip
     pkgs.p7zip
     pkgs.nil # Nix language server
-    pkgs.gnome.ghex
+    pkgs.ghex
     pkgs.unzip
 
     # Misc
@@ -28,7 +28,7 @@ pkgs: with pkgs; [
     kdePackages.partitionmanager
     pkgs.tor-browser
     pkgs.googleearth-pro
-    pkgs.cura
+    #pkgs.cura # <---- FUCK YOU
     pkgs.slack
     pkgs.axel
 
@@ -36,7 +36,7 @@ pkgs: with pkgs; [
     pkgs.jdk21
     pkgs.python311Full
     pkgs.python311Packages.pip
-    pkgs.nodejs_22
+    pkgs.nodejs_23
     pkgs.qucs-s
     pkgs.dart
     pkgs.patchelf
