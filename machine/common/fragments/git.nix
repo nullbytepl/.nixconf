@@ -4,7 +4,7 @@
     programs.git = {
         enable = true;
         config = {
-            user.name  = "Kamila Wojciechowska";
+            user.name  = "Mila Wojciechowska";
             user.email = "nullbytepl@gmail.com";
         };
     };

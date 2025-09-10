@@ -31,12 +31,13 @@ pkgs: with pkgs; [
     #pkgs.cura # <---- FUCK YOU
     pkgs.slack
     pkgs.axel
+    pkgs.alsa-utils
 
     # Misc development
     pkgs.jdk21
     pkgs.python311Full
     pkgs.python311Packages.pip
-    pkgs.nodejs_23
+    pkgs.nodejs_24
     pkgs.qucs-s
     pkgs.dart
     pkgs.patchelf
