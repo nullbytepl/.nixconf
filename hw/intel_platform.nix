@@ -4,7 +4,7 @@
         pkgs.intel-gpu-tools
     ];
 
-    hardware.opengl = {
+    hardware.graphics = {
         extraPackages = with pkgs; [
             intel-media-driver
         ];

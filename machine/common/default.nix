@@ -50,6 +50,8 @@
       "/nix/var/nix/profiles/per-user/root/channels"
       "/home/mila/.nixconf/"
     ];
+
+    settings.experimental-features = "nix-command flakes";
   };
 
   environment.systemPackages = import ./packages.nix pkgs;
