@@ -3,7 +3,7 @@
   imports =
     [
       ./base.nix
-      #./fragments/vmware.nix
+      ./fragments/virtualbox.nix
       ./fragments/git.nix
       ./fragments/steam.nix
       ./fragments/logi/logiops.nix
