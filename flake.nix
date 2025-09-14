@@ -6,7 +6,6 @@
         nixhardware.url = "github:nixos/nixos-hardware";
 
         ucodenix.url = "github:e-tho/ucodenix";
-
     };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nixhardware, ucodenix }@inputs:

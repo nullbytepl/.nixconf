@@ -21,9 +21,27 @@
   # Connect to the Magic Keyboard as soon as possible (i.e. schedule the connection before sddm loads)
   # Don't block the boot process ('&')
   services.xserver.displayManager.setupCommands = ''
-
       ${pkgs.bluez}/bin/bluetoothctl connect 48:E1:5C:C3:A5:04 &
     '';
+
+  services.xserver = {
+    xrandrHeads = [
+      {
+        output = "HDMI-A-1";
+        primary = false;
+        monitorConfig = ''
+          Option "Enable" "true"
+        '';
+      }
+      {
+        output = "DP-2";
+        primary = true;
+        monitorConfig = ''
+          Option "Position" "0 0"
+        '';
+      }
+    ];
+  };
 
   networking.hostName = "ouppy";
 

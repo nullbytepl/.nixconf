@@ -35,6 +35,12 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Explicitly DISABLE Wayland in SDDM, as it might become true by default in the future
+  # Setting this to true breaks:
+  # a) displayManager.setupCommands, which I use to connect to my keyboard faster;
+  # b) turning off my second monitor
+  services.displayManager.sddm.wayland.enable = false;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";
