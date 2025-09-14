@@ -17,7 +17,7 @@
     nixosConfigurations =
         with builtins;
         let
-          machines = lib.remove "common" (attrNames (readDir ./machine));
+          machines = attrNames (readDir ./machine);
         in
         listToAttrs (
           map (machine: {
@@ -26,7 +26,7 @@
               specialArgs = {
                 inherit inputs outputs lib;
               };
-              modules = [ ./machine/${machine} ];
+              modules = [ ./machine/${machine} ./common ];
             };
           }) machines
         );

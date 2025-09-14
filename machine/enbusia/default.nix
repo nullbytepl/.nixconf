@@ -13,7 +13,6 @@
     inputs.nixhardware.nixosModules.common-cpu-amd-zenpower
     inputs.nixhardware.nixosModules.common-pc-laptop-ssd
     inputs.nixhardware.nixosModules.common-pc-laptop
-    ../common
   ];
 
   networking.hostName = "enbusia";

@@ -13,7 +13,6 @@
     inputs.nixhardware.nixosModules.common-cpu-intel-cpu-only
     inputs.nixhardware.nixosModules.common-pc-ssd
     inputs.nixhardware.nixosModules.common-pc
-    ../common
   ];
 
   boot.kernelParams = [ "pcie_aspm=off" ];
