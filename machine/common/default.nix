@@ -59,4 +59,9 @@
   environment.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE = "1";
   };
+
+  programs.bash.shellAliases = {
+    nixos-update-here = "sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch --flake .";
+    nixos-update = "pushd ~/.nixconf && nixos-update-here; popd";
+  };
 }
