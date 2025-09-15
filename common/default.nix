@@ -5,7 +5,6 @@
       ./base.nix
       ./packages.nix
       ./fragments/virtualbox.nix
-      ./fragments/git.nix
       ./fragments/steam.nix
       ./fragments/logi/logiops.nix
       ./fragments/magic_keyboard.nix

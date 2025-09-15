@@ -3,6 +3,7 @@
   imports =
     [
       ./hyfetch.nix
+      ./git.nix
     ];
 
   home.username = "mila";
