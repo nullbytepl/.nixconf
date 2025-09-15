@@ -8,9 +8,14 @@
         ucodenix.url = "github:e-tho/ucodenix";
 
         erosanix.url = "github:emmanuelrosa/erosanix";
+
+        home-manager = {
+          url = "github:nix-community/home-manager/release-25.05";
+          inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixhardware, ucodenix, erosanix }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixhardware, ucodenix, erosanix, home-manager }@inputs:
   let
     lib = nixpkgs.lib;
     in
@@ -28,7 +33,14 @@
               specialArgs = {
                 inherit inputs outputs lib;
               };
-              modules = [ ./machine/${machine} ./common ];
+              modules = [
+                ./machine/${machine}
+                ./common
+                home-manager.nixosModules.home-manager {
+                  home-manager.useGlobalPkgs = true;
+                  home-manager.users.mila = import ./home/mila.nix;
+                }
+              ];
             };
           }) machines
         );
