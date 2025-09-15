@@ -1,6 +1,11 @@
-pkgs: with pkgs; [
+{ pkgs, inputs, custom, ... }:
+let
+  custom = import ../packages { inherit pkgs inputs; };
+in
+{
+  environment.systemPackages = [
     # Basics
-    kdePackages.kate
+    pkgs.kdePackages.kate
     pkgs.vscode.fhs
     pkgs.binutils
     pkgs.spotify
@@ -23,9 +28,9 @@ pkgs: with pkgs; [
     # Misc
     pkgs.obs-studio
     pkgs.mpv
-    kdePackages.ktorrent
-    kdePackages.kdenlive
-    kdePackages.partitionmanager
+    pkgs.kdePackages.ktorrent
+    pkgs.kdePackages.kdenlive
+    pkgs.kdePackages.partitionmanager
     pkgs.tor-browser
     pkgs.googleearth-pro
     #pkgs.cura # <---- FUCK YOU
@@ -60,4 +65,7 @@ pkgs: with pkgs; [
     pkgs.android-tools # This would be installed by android-studio, but it's nixos after all
     pkgs.git-repo
     pkgs.jadx
-]
+
+    custom.ltspice
+  ];
+}

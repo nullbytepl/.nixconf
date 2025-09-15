@@ -6,9 +6,11 @@
         nixhardware.url = "github:nixos/nixos-hardware";
 
         ucodenix.url = "github:e-tho/ucodenix";
+
+        erosanix.url = "github:emmanuelrosa/erosanix";
     };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixhardware, ucodenix }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixhardware, ucodenix, erosanix }@inputs:
   let
     lib = nixpkgs.lib;
     in
@@ -31,4 +33,5 @@
           }) machines
         );
   };
+
 }

@@ -3,6 +3,7 @@
   imports =
     [
       ./base.nix
+      ./packages.nix
       ./fragments/virtualbox.nix
       ./fragments/git.nix
       ./fragments/steam.nix
@@ -53,8 +54,6 @@
 
     settings.experimental-features = "nix-command flakes";
   };
-
-  environment.systemPackages = import ./packages.nix pkgs;
 
   environment.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE = "1";
