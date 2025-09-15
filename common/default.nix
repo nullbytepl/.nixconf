@@ -63,4 +63,6 @@
     nixos-update-here = "sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch --flake .";
     nixos-update = "pushd ~/.nixconf && nixos-update-here; popd";
   };
+
+  services.fwupd.enable = true;
 }

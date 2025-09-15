@@ -67,5 +67,6 @@ in
     pkgs.jadx
 
     custom.ltspice
+    custom.idapro
   ];
 }
