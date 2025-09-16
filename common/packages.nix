@@ -37,6 +37,8 @@ in
     pkgs.slack
     pkgs.axel
     pkgs.alsa-utils
+    pkgs.cowsay
+    pkgs.sl
 
     # Misc development
     pkgs.jdk21
