@@ -5,6 +5,7 @@
       ./base.nix
       ./packages.nix
       ./fragments/virtualbox.nix
+      ./fragments/earth.nix
       ./fragments/steam.nix
       ./fragments/logi/logiops.nix
       ./fragments/magic_keyboard.nix
@@ -27,14 +28,6 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-
-    # Needs to be in the top-level config
-    # Ugly, but it works
-    permittedInsecurePackages = [
-      "googleearth-pro-7.3.4.8248"
-      "googleearth-pro-7.3.6.9796"
-      "googleearth-pro-7.3.6.10201"
-    ];
   };
 
   nix = {
