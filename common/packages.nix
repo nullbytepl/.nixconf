@@ -1,4 +1,4 @@
-{ pkgs, inputs, custom, ... }:
+{ pkgs, inputs, ... }:
 let
   custom = import ../packages { inherit pkgs inputs; };
 in
@@ -33,7 +33,7 @@ in
     pkgs.kdePackages.partitionmanager
     pkgs.tor-browser
     pkgs.googleearth-pro
-    #pkgs.cura # <---- FUCK YOU
+    pkgs.cura-appimage
     pkgs.slack
     pkgs.axel
     pkgs.alsa-utils
