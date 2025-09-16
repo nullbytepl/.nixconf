@@ -4,6 +4,7 @@
     [
       ./hyfetch.nix
       ./git.nix
+      ./plasma.nix
     ];
 
   home.username = "mila";
