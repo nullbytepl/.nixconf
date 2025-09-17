@@ -20,6 +20,13 @@ pkgs.stdenv.mkDerivation rec {
 
   src = "${ida91-bit}/ida91/ida-pro_91_x64linux.run";
 
+  srcWdfPlugin = pkgs.fetchFromGitHub {
+    owner = "thalium";
+    repo = "ida_kmdf";
+    rev ="01eb81aad4bf9df17294305b611fb9abacc2179e";
+    hash = "sha256-57azcpL21VNv0ZyxrsUtYczA2vZyB60vCbWF24DEE/c=";
+  };
+
   desktopItem = pkgs.makeDesktopItem {
     name = "ida-pro";
     exec = "ida";
@@ -112,6 +119,10 @@ pkgs.stdenv.mkDerivation rec {
     cp ${ida91-bit}/ida91/kg_patch/idapro.hexlic $IDADIR/
     cp ${ida91-bit}/ida91/kg_patch/idapro.hexlic $IDADIR/../
 
+    # WDF Plugin
+    cp ${srcWdfPlugin}/wdf_til/* $IDADIR/til/
+    cp ${srcWdfPlugin}/wdf_plugin/* $IDADIR/plugins/
+    cp ${srcWdfPlugin}/utils/* $IDADIR/
 
     # Link the exported libraries to the output.
     for lib in $IDADIR/libida*; do
