@@ -14,6 +14,7 @@
       ./fragments/vesktop.nix
       ./fragments/flutter.nix
       ./fragments/chrome.nix
+      ./fragments/avatar.nix
       ./fragments/ucode.nix
     ];
 
