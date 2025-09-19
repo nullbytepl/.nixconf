@@ -116,8 +116,13 @@ pkgs.stdenv.mkDerivation rec {
     # Crack
     cp ${ida91-bit}/ida91/kg_patch/linux/* $IDADIR
 
-    cp ${ida91-bit}/ida91/kg_patch/idapro.hexlic $IDADIR/
-    cp ${ida91-bit}/ida91/kg_patch/idapro.hexlic $IDADIR/../
+    # Generate a license with HEXRV to unlock 32-bit RISC-V decompilation as well
+    # Note: `busybox` is not in buildInputs just because it has incompatible commands
+    cp ${ida91-bit}/ida91/kg_patch/keygen3.py $IDADIR
+    pushd $IDADIR
+    ${pkgs.busybox}/bin/sed -i 's/"HEXRV64",/"HEXRV64",\n"HEXRV",/' keygen3.py
+    ${pythonForIDA}/bin/python3 keygen3.py
+    popd
 
     # WDF Plugin
     cp ${srcWdfPlugin}/wdf_til/* $IDADIR/til/
