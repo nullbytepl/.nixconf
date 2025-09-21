@@ -1,6 +1,9 @@
 {
+  nixpkgs,
+  pkgs,
   inputs,
   lib,
+  config,
   ...
 }:
 {
@@ -10,9 +13,11 @@
     inputs.nixhardware.nixosModules.common-hidpi
     inputs.nixhardware.nixosModules.common-cpu-amd
     inputs.nixhardware.nixosModules.common-cpu-amd-pstate
-    inputs.nixhardware.nixosModules.common-cpu-amd-zenpower
+    #inputs.nixhardware.nixosModules.common-cpu-amd-zenpower
     inputs.nixhardware.nixosModules.common-pc-laptop-ssd
     inputs.nixhardware.nixosModules.common-pc-laptop
+
+    (import ../../common/kernel.nix { cpuArch = "znver2"; inherit lib config pkgs; })
   ];
 
   networking.hostName = "enbusia";

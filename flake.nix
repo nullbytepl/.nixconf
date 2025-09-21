@@ -48,8 +48,8 @@
                 inherit inputs outputs lib;
               };
               modules = [
-                ./machine/${machine}
                 ./common
+                ./machine/${machine}
                 home-manager.nixosModules.home-manager {
                   home-manager.useGlobalPkgs = true;
                   home-manager.useUserPackages = true;

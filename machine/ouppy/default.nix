@@ -2,6 +2,7 @@
   inputs,
   lib,
   pkgs,
+  config,
   ...
 }:
 {
@@ -13,6 +14,8 @@
     inputs.nixhardware.nixosModules.common-cpu-intel-cpu-only
     inputs.nixhardware.nixosModules.common-pc-ssd
     inputs.nixhardware.nixosModules.common-pc
+
+    (import ../../common/kernel.nix { cpuArch = "alderlake"; useNv = true; inherit lib config pkgs; })
   ];
 
   boot.kernelParams = [ "pcie_aspm=off" ];
