@@ -4,6 +4,7 @@
     [
       ./base.nix
       ./packages.nix
+      ./sops.nix
       ./fragments/virtualbox.nix
       ./fragments/earth.nix
       ./fragments/steam.nix
@@ -25,6 +26,8 @@
     description = "Mila Wojciechowska";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = import ./user_packages.nix pkgs;
+    hashedPasswordFile = config.sops.secrets.password.path;
+
   };
 
   nixpkgs.config = {

@@ -39,6 +39,8 @@ in
     pkgs.alsa-utils
     pkgs.cowsay
     pkgs.sl
+    pkgs.age
+    pkgs.sops
 
     # Misc development
     pkgs.jdk21
