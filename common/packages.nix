@@ -20,7 +20,7 @@ in
     pkgs.file
     pkgs.wget
     pkgs.zip
-    pkgs.p7zip
+    pkgs._7zz
     pkgs.nil # Nix language server
     pkgs.ghex
     pkgs.unzip

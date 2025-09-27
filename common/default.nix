@@ -58,6 +58,7 @@
   programs.bash.shellAliases = {
     nixos-update-here = "sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch --flake .";
     nixos-update = "pushd ~/.nixconf && nixos-update-here; popd";
+    "7z" = "7zz";
   };
 
   services.fwupd.enable = true;
