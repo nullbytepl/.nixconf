@@ -18,8 +18,6 @@
     (import ../../common/kernel.nix { cpuArch = "alderlake"; useNv = true; inherit lib config pkgs; })
   ];
 
-  boot.kernelParams = [ "pcie_aspm=off" ];
-
   # Connect to the Magic Keyboard as soon as possible (i.e. schedule the connection before sddm loads)
   # Don't block the boot process ('&')
   services.xserver.displayManager.setupCommands = ''
