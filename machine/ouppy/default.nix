@@ -43,6 +43,11 @@
     ];
   };
 
+  # Force disable hibernation because it definitely ~DOES NOT~ work on this machine
+  systemd.sleep.extraConfig = ''
+    AllowHibernation=no
+  '';
+
   networking.hostName = "ouppy";
 
   system.stateVersion = "25.05";
