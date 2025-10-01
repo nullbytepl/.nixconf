@@ -3,8 +3,8 @@
   imports =
     [
       ./base.nix
-      ./packages.nix
-      ./sops.nix
+      ./packages/global.nix
+      ./fragments/sops.nix
       ./fragments/virtualbox.nix
       ./fragments/earth.nix
       ./fragments/steam.nix
@@ -17,6 +17,7 @@
       ./fragments/chrome.nix
       ./fragments/avatar.nix
       ./fragments/ucode.nix
+      ./fragments/wifi.nix
     ];
 
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
@@ -25,7 +26,7 @@
     isNormalUser = true;
     description = "Mila Wojciechowska";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = import ./user_packages.nix pkgs;
+    packages = import ./packages/user.nix pkgs;
     hashedPasswordFile = config.sops.secrets.password.path;
 
   };

@@ -15,7 +15,7 @@
     inputs.nixhardware.nixosModules.common-pc-ssd
     inputs.nixhardware.nixosModules.common-pc
 
-    (import ../../common/kernel.nix { cpuArch = "alderlake"; useNv = true; inherit lib config pkgs; })
+    (import ../../common/fragments/kernel.nix { cpuArch = "alderlake"; useNv = true; inherit lib config pkgs; })
   ];
 
   # Connect to the Magic Keyboard as soon as possible (i.e. schedule the connection before sddm loads)

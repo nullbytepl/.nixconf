@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 let
-  custom = import ../packages { inherit pkgs inputs; };
+  custom = import ../../packages { inherit pkgs inputs; };
 in
 {
   environment.systemPackages = [
