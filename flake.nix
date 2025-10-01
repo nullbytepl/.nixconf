@@ -5,7 +5,8 @@
 
         nixhardware.url = "github:nixos/nixos-hardware";
 
-        ucodenix.url = "github:e-tho/ucodenix";
+        # HACK: use an older version of ucodenix, as the newest revision breaks 25.05
+        ucodenix.url = "github:e-tho/ucodenix/ba7f0a366460e0fbea9622fc770cb982be0e4720";
 
         erosanix.url = "github:emmanuelrosa/erosanix";
 
