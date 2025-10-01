@@ -41,6 +41,7 @@ in
     pkgs.sl
     pkgs.age
     pkgs.sops
+    pkgs.ffmpeg-full
 
     # Misc development
     pkgs.jdk21
