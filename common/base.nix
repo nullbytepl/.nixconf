@@ -39,7 +39,7 @@
   # Setting this to true breaks:
   # a) displayManager.setupCommands, which I use to connect to my keyboard faster;
   # b) turning off my second monitor
-  services.displayManager.sddm.wayland.enable = false;
+  services.displayManager.sddm.wayland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
