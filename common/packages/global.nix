@@ -42,6 +42,7 @@ in
     pkgs.age
     pkgs.sops
     pkgs.ffmpeg-full
+    pkgs.qgis-ltr
 
     # Misc development
     pkgs.jdk21
