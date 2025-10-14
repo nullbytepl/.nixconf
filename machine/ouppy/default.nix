@@ -8,6 +8,7 @@
 {
   imports = lib.flatten [
     ./hardware-configuration.nix
+    ./kwin
     ../../hw/nvidia.nix
     ../../hw/intel_platform.nix
     inputs.nixhardware.nixosModules.common-hidpi
@@ -17,26 +18,6 @@
 
     (import ../../common/fragments/kernel.nix { cpuArch = "alderlake"; useNv = true; inherit lib config pkgs; })
   ];
-
-  # TODO: this is currently broken because wayland :)
-  services.xserver = {
-    xrandrHeads = [
-      {
-        output = "HDMI-A-1";
-        primary = false;
-        monitorConfig = ''
-          Option "Enable" "true"
-        '';
-      }
-      {
-        output = "DP-1";
-        primary = true;
-        monitorConfig = ''
-          Option "Position" "0 0"
-        '';
-      }
-    ];
-  };
 
   # Connect to the Magic Keyboard as soon as possible (i.e. schedule the connection before sddm loads)
   # Don't block the boot process ('&')
