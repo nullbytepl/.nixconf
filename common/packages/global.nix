@@ -74,5 +74,8 @@ in
 
     custom.ltspice
     custom.idapro
+
+    inputs.affinity-nix.packages.x86_64-linux.photo
+    inputs.affinity-nix.packages.x86_64-linux.designer
   ];
 }

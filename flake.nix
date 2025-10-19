@@ -5,6 +5,8 @@
 
         nixhardware.url = "github:nixos/nixos-hardware";
 
+        affinity-nix.url = "github:mrshmllow/affinity-nix";
+
         # HACK: use an older version of ucodenix, as the newest revision breaks 25.05
         ucodenix.url = "github:e-tho/ucodenix/ba7f0a366460e0fbea9622fc770cb982be0e4720";
 
@@ -40,7 +42,8 @@
     home-manager,
     secrets,
     plasma-manager,
-    sops-nix
+    sops-nix,
+    affinity-nix
   }@inputs:
   let
     lib = nixpkgs.lib;
