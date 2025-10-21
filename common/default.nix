@@ -18,6 +18,11 @@
       ./fragments/avatar.nix
       ./fragments/ucode.nix
       ./fragments/wifi.nix
+
+      # Common nixhardware configs; no platform-specific stuff to go here.
+      inputs.nixhardware.nixosModules.common-hidpi
+      inputs.nixhardware.nixosModules.common-pc-ssd
+      inputs.nixhardware.nixosModules.common-pc
     ];
 
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;

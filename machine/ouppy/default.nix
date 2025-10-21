@@ -5,19 +5,19 @@
   config,
   ...
 }:
+let
+  kernel_ADL = (import ../../common/fragments/kernel.nix { cpuArch = "alderlake"; useNv = true; inherit lib config pkgs; });
+in
 {
   imports = lib.flatten [
     ./hardware-configuration.nix
     ./kwin
     ../../hw/nvidia.nix
-    ../../hw/intel_platform.nix
+    ../../hw/intel_igpu.nix
     ../../hw/hiram.nix
-    inputs.nixhardware.nixosModules.common-hidpi
     inputs.nixhardware.nixosModules.common-cpu-intel-cpu-only
-    inputs.nixhardware.nixosModules.common-pc-ssd
-    inputs.nixhardware.nixosModules.common-pc
 
-    (import ../../common/fragments/kernel.nix { cpuArch = "alderlake"; useNv = true; inherit lib config pkgs; })
+    kernel_ADL
   ];
 
   # Connect to the Magic Keyboard as soon as possible (i.e. schedule the connection before sddm loads)
