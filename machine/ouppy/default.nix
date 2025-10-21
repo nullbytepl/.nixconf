@@ -11,6 +11,7 @@
     ./kwin
     ../../hw/nvidia.nix
     ../../hw/intel_platform.nix
+    ../../hw/hiram.nix
     inputs.nixhardware.nixosModules.common-hidpi
     inputs.nixhardware.nixosModules.common-cpu-intel-cpu-only
     inputs.nixhardware.nixosModules.common-pc-ssd
