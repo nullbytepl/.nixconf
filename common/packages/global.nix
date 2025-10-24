@@ -30,6 +30,7 @@ in
     pkgs.mpv
     pkgs.kdePackages.ktorrent
     pkgs.kdePackages.kdenlive
+    pkgs.kdePackages.kamera
     pkgs.kdePackages.partitionmanager
     pkgs.tor-browser
     pkgs.googleearth-pro
