@@ -1,5 +1,17 @@
 { config, pkgs, ... }:
 {
+    nixpkgs.overlays = [
+        (self: super: {
+            proton-ge-bin = super.proton-ge-bin.overrideAttrs (old: rec {
+                version = "GE-Proton10-21";
+                src = super.fetchzip {
+                    url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${version}/${version}.tar.gz";
+                    hash = "sha256-Oa9+DjEeZZiJEr9H7wnUtGb6v/JXHk0qt0GAGcp3JFQ=";
+                };
+            });
+        })
+    ];
+
     # Steam
     programs.steam = {
         enable = true;
