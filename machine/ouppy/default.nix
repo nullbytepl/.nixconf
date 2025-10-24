@@ -15,6 +15,7 @@ in
     ../../hw/nvidia.nix
     ../../hw/intel_igpu.nix
     ../../hw/hiram.nix
+    ../../hw/hello.nix
     inputs.nixhardware.nixosModules.common-cpu-intel-cpu-only
 
     kernel_ADL

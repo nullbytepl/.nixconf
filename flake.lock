@@ -206,6 +206,21 @@
         "type": "github"
       }
     },
+    "howdy-module": {
+      "locked": {
+        "lastModified": 1759912464,
+        "narHash": "sha256-rfAAqjljUPJdgCBGTZhviYsY3liFvUMsd4GbtMFm3ho=",
+        "owner": "pineapplehunter",
+        "repo": "howdy-module",
+        "rev": "a38e5a5cab38db0f20a2ca096460d15f0055acbd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pineapplehunter",
+        "repo": "howdy-module",
+        "type": "github"
+      }
+    },
     "nixhardware": {
       "locked": {
         "lastModified": 1760958188,
@@ -392,6 +407,7 @@
         "affinity-nix": "affinity-nix",
         "erosanix": "erosanix",
         "home-manager": "home-manager",
+        "howdy-module": "howdy-module",
         "nixhardware": "nixhardware",
         "nixpkgs": "nixpkgs_5",
         "nixpkgs-unstable": "nixpkgs-unstable",

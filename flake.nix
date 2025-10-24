@@ -31,6 +31,9 @@
           url = "github:Mic92/sops-nix";
           inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        # TODO: switch to the nixpkgs impl once https://github.com/NixOS/nixpkgs/pull/216245 gets merged
+        howdy-module.url = "github:pineapplehunter/howdy-module";
     };
 
   outputs = { self,
@@ -43,7 +46,8 @@
     secrets,
     plasma-manager,
     sops-nix,
-    affinity-nix
+    affinity-nix,
+    howdy-module
   }@inputs:
   let
     lib = nixpkgs.lib;
