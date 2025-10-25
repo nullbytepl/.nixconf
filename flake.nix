@@ -13,7 +13,11 @@
         erosanix.url = "github:emmanuelrosa/erosanix";
 
         home-manager = {
-          url = "github:nix-community/home-manager/release-25.05";
+          # TODO: ~IMPORTANT~ once we go to 25.11 change to release branch
+          # TODO:
+          # TODO:
+          # TODO:
+          url = "github:nix-community/home-manager/master";
           inputs.nixpkgs.follows = "nixpkgs";
         };
 
@@ -34,6 +38,8 @@
 
         # TODO: switch to the nixpkgs impl once https://github.com/NixOS/nixpkgs/pull/216245 gets merged
         howdy-module.url = "github:pineapplehunter/howdy-module";
+
+        apple-fonts.url= "github:Lyndeno/apple-fonts.nix";
     };
 
   outputs = { self,
@@ -47,7 +53,8 @@
     plasma-manager,
     sops-nix,
     affinity-nix,
-    howdy-module
+    howdy-module,
+    apple-fonts
   }@inputs:
   let
     lib = nixpkgs.lib;
@@ -70,12 +77,13 @@
                 ./common
                 ./machine/${machine}
                 home-manager.nixosModules.home-manager {
+                  home-manager.extraSpecialArgs = { inherit inputs outputs; };
                   home-manager.useGlobalPkgs = true;
                   home-manager.useUserPackages = true;
                   home-manager.sharedModules = [
                     plasma-manager.homeModules.plasma-manager
                   ];
-                  home-manager.users.mila = import ./home/mila.nix;
+                  home-manager.users.mila = ./home/mila.nix;
                 }
                 sops-nix.nixosModules.sops
               ];

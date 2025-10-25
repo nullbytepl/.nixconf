@@ -32,6 +32,7 @@ in
     pkgs.kdePackages.kdenlive
     pkgs.kdePackages.kamera
     pkgs.kdePackages.partitionmanager
+    pkgs.kdePackages.kcharselect
     pkgs.tor-browser
     pkgs.googleearth-pro
     pkgs.cura-appimage
@@ -62,9 +63,6 @@ in
     pkgs.typescript
 
     # Libraries & stuff
-    pkgs.corefonts
-    pkgs.vistafonts
-    pkgs.fira-code
     pkgs.apple-cursor
 
     # Android

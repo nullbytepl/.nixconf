@@ -1,10 +1,11 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   imports =
     [
       ./hyfetch.nix
       ./git.nix
       ./plasma.nix
+      ./fonts.nix
     ];
 
   home.username = "mila";
