@@ -3,7 +3,9 @@
   # Git configuration
   programs.git = {
     enable = true;
-    userName = "Mila Wojciechowska";
-    userEmail = "nullbytepl@gmail.com";
+    settings.user = {
+        name = "Mila Wojciechowska";
+        email = "nullbytepl@gmail.com";
+    };
   };
 }

@@ -17,5 +17,10 @@
 
   networking.hostName = "enbusia";
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
+
+  boot.extraModulePackages = with pkgs; [
+    linuxPackages_latest.ryzen-smu
+  ];
+
 }

@@ -13,6 +13,8 @@
 
       light_dark = "dark";
       lightness = 0.65;
+
+      backend = "neofetch";
     };
   };
 }

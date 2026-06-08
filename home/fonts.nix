@@ -9,14 +9,14 @@
 
   home.packages = [
     pkgs.corefonts
-    pkgs.vistafonts
+    pkgs.vista-fonts
     pkgs.fira-code
     pkgs.fira-code-symbols
     pkgs.inter
     pkgs.lato
     pkgs.noto-fonts
     pkgs.noto-fonts-cjk-sans
-    pkgs.noto-fonts-emoji
+    pkgs.noto-fonts-color-emoji
     pkgs.roboto
     pkgs.liberation_ttf
     pkgs.dejavu_fonts

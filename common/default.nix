@@ -5,7 +5,7 @@
       ./base.nix
       ./packages/global.nix
       ./fragments/sops.nix
-      ./fragments/virtualbox.nix
+      ./fragments/vmware.nix
       ./fragments/earth.nix
       ./fragments/steam.nix
       ./fragments/logi/logiops.nix
@@ -18,6 +18,7 @@
       ./fragments/avatar.nix
       ./fragments/ucode.nix
       ./fragments/wifi.nix
+      ./fragments/affinity.nix
 
       # Common nixhardware configs; no platform-specific stuff to go here.
       inputs.nixhardware.nixosModules.common-hidpi
@@ -29,7 +30,7 @@
 
   users.users.mila = {
     isNormalUser = true;
-    description = "Mila Wojciechowska";
+    description = "Mila Kulka";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = import ./packages/user.nix pkgs;
     hashedPasswordFile = config.sops.secrets.password.path;

@@ -45,11 +45,12 @@ in
     pkgs.sops
     pkgs.ffmpeg-full
     pkgs.qgis-ltr
+    pkgs.gnome-clocks
 
     # Misc development
     pkgs.jdk21
-    pkgs.python311Full
-    pkgs.python311Packages.pip
+    pkgs.python313
+    pkgs.python313Packages.pip
     pkgs.nodejs_24
     pkgs.qucs-s
     pkgs.dart
@@ -72,9 +73,6 @@ in
     pkgs.jadx
 
     custom.ltspice
-    custom.idapro
-
-    inputs.affinity-nix.packages.x86_64-linux.photo
-    inputs.affinity-nix.packages.x86_64-linux.designer
+    #custom.idapro # TODO:
   ];
 }

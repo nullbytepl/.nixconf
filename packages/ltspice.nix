@@ -6,13 +6,13 @@
   ...
 }:
 mkWindowsApp rec {
-  wine = pkgs.wineWowPackages.stable;
+  wine = pkgs.wineWow64Packages.stable;
   pname = "ltspice";
-  version = "24.1.10";
+  version = "26.0.2";
 
   src = fetchurl {
     url = "https://ltspice.analog.com/download/${version}/LTspice64.msi";
-    sha256 = "sha256-LSK84ogbBk9kP7LKg8rzCGDqq36XfsK4Kzn2Zwea8C4=";
+    sha256 = "sha256-SF2r0tfYKT3nM6OZcZ9lOO/aSlS0ixgaFOBycRhphNM=";
   };
 
   dontUnpack = true;

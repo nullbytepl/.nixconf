@@ -1,9 +1,9 @@
 { pkgs, inputs, ... }:
 let
-  copyDesktopIcons = inputs.erosanix.lib."${pkgs.system}".copyDesktopIcons;
-  copyDesktopItems = inputs.erosanix.lib."${pkgs.system}".copyDesktopIcons;
-  makeDesktopIcon = inputs.erosanix.lib."${pkgs.system}".makeDesktopIcon;
-  mkWindowsApp = inputs.erosanix.lib."${pkgs.system}".mkWindowsApp;
+  copyDesktopIcons = inputs.erosanix.lib."${pkgs.stdenv.hostPlatform.system}".copyDesktopIcons;
+  copyDesktopItems = inputs.erosanix.lib."${pkgs.stdenv.hostPlatform.system}".copyDesktopIcons;
+  makeDesktopIcon = inputs.erosanix.lib."${pkgs.stdenv.hostPlatform.system}".makeDesktopIcon;
+  mkWindowsApp = inputs.erosanix.lib."${pkgs.stdenv.hostPlatform.system}".mkWindowsApp;
 in
 {
   ltspice = pkgs.callPackage ./ltspice.nix { inherit pkgs mkWindowsApp; };

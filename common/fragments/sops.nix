@@ -12,6 +12,10 @@ in
         sopsFile = secrets.password;
         neededForUsers = true;
       };
+      "sshkey/enbusia" = {
+        sopsFile = secrets.ssh;
+        neededForUsers = true;
+      };
     };
   };
 }

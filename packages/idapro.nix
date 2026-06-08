@@ -10,7 +10,7 @@ let
   ida91-bit = fetchtorrent {
     backend = "rqbit";
     url = "magnet:?xt=urn:btih:f24cfadb8a66b343bf1ff4f0c1386a5f6991c818&dn=ida91";
-    hash = "sha256-B3zzhmQ0M39Xfg0i6KOHwCx4HJqny74ShXf870ahQo4=";
+    hash = "sha256-ruS4OSLu5oT6Yr7bK5HZmQ/6pRaqAtBjyG71Hp2W0GQ=";
   };
   pythonForIDA = pkgs.python313.withPackages (ps: with ps; [ rpyc ]);
 in
@@ -159,7 +159,7 @@ pkgs.stdenv.mkDerivation rec {
 
     src = fetchurl {
       url = "https://static.wikitide.net/zenithwiki/0/0d/IDAIcon.png";
-      sha256 = "sha256-9cCUkt7WD9gUurm4d43nGM4A8IRCKDv5TiWLFaUvvrs=";
+      sha256 = "sha256-OERYiiFbbXjkTpxfmn4TXJtUsjFDIDIz37yiXD59E9w=";
     };
   };
 

@@ -1,23 +1,18 @@
 {
     inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
         nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
         nixhardware.url = "github:nixos/nixos-hardware";
 
         affinity-nix.url = "github:mrshmllow/affinity-nix";
 
-        # HACK: use an older version of ucodenix, as the newest revision breaks 25.05
-        ucodenix.url = "github:e-tho/ucodenix/ba7f0a366460e0fbea9622fc770cb982be0e4720";
+        ucodenix.url = "github:e-tho/ucodenix";
 
         erosanix.url = "github:emmanuelrosa/erosanix";
 
         home-manager = {
-          # TODO: ~IMPORTANT~ once we go to 25.11 change to release branch
-          # TODO:
-          # TODO:
-          # TODO:
-          url = "github:nix-community/home-manager/master";
+          url = "github:nix-community/home-manager/release-26.05";
           inputs.nixpkgs.follows = "nixpkgs";
         };
 
